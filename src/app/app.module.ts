@@ -1,27 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { CustomersComponent } from './customers/customers.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { SharedModule } from './shared/shared.module';
-import { FilterComponentComponent } from './customer-list/filter-component/filter-component.component';
 import {FormsModule} from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { OrdersModule } from './orders/orders.module';
+import { CustomersModule } from './customers/customers.module'; 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CustomersComponent,
-    CustomerListComponent, 
-    FilterComponentComponent
-  ],
+    AppComponent
+  ], 
   imports: [
     BrowserModule,
-     SharedModule,
+     CustomersModule,    
      FormsModule,
      CoreModule,
-     HttpClientModule
+     HttpClientModule,
+     AppRoutingModule,
+     OrdersModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

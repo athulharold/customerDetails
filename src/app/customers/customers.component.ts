@@ -1,7 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ICustomer} from "../shared/interfaces";
 import {DataService} from "../core/data.service";
-
+import {CustomersRoutingModule} from './customers-routing.module'
+import {OrdersModule} from '../orders/orders.module';
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',

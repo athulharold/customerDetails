@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import {ICustomer} from "../shared/interfaces";
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import {FilterComponentComponent} from "./filter-component/filter-component.component";
-import   {CapitalizePipe} from '../shared/capitalize.pipe';
-import {SorterService} from '../core/sorter.service';
+import { ICustomer } from '../../shared/interfaces';
+import { SorterService } from '../../core/sorter.service';
+
 @Component({
   selector: 'app-customer-list',
   templateUrl: './customer-list.component.html',

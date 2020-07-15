@@ -12,7 +12,7 @@
     </thead>
     <tr *ngFor="let i of filteredCustomers" >
         <td>
-            <a>
+            <a [routerLink]="['/orders',i.id]">
                 {{i.name | capitalize}}
             </a>
         </td>
@@ -30,6 +30,6 @@
         <td>{{customersOrderTotal| currency:currencyCode: 'symbol'}} </td>
     </tr>
 </table>
-Number of Customers: {{filteredCustomers.length}}
+<p *ngIf="filteredCustomers" >Number of Customers: {{filteredCustomers.length}} </p>
 <br />
 
